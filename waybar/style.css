@@ -1,0 +1,143 @@
+
+
+@define-color colour1 rgba(60, 41, 86, 1);
+@define-color colour2 rgba(142, 172, 236, 1);
+@define-color colour3 rgba(46, 43, 45, 1);
+@define-color colour4 rgba(83, 105, 190, 1);
+@define-color colour5 rgba(240, 25, 25, 1);
+@define-color colour6 rgba(76, 54, 125, 1);
+/*
+$russian-violet: rgba(60, 41, 86, 1);
+$resolution-blue: rgba(52, 49, 121, 1);
+$russian-violet-2: rgba(51, 34, 81, 1);
+$tekhelet: rgba(76, 54, 125, 1);
+$savoy-blue: rgba(83, 105, 190, 1);
+$vista-blue: rgba(142, 172, 236, 1);
+*/
+* {
+	font-size: 10px;
+	font-family: monospace;
+	/*font-weight: bold;*/
+
+}
+
+window#waybar {
+	/* background: #292b2e; */
+	background-color: alpha(@colour6, .5);
+	color: @colour2;
+	border-radius: 15px;
+}
+
+#clock.1,
+#clock.2,
+#clock.3,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk {
+	background: @colour1;
+	border-radius: 10px;
+	margin: 3px 3px;
+	padding: 0 10px;
+}
+#workspaces {
+	background: alpha(@colour3,0.9);
+	border-radius: 10px;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#tray {
+	background: @colour1;
+	border-radius: 10px;
+	padding: 0 10px;
+	margin-top: 3px;
+	margin-right:75px;
+	margin-bottom: 3px;
+	margin-left: 3px;
+}
+
+#clock.1{
+color: @colour2;
+font-weight: bold;
+margin-left: 75px;
+}
+
+#clock.2{
+color: @colour2;
+font-weight: bold;
+}
+
+#clock.3{
+color: @colour2;
+font-weight: bold;
+}
+
+#workspaces button {
+	padding: 0px 2px 0px 2px;
+	margin-top: -3px;
+	margin-bottom: -3px;
+	color: alpha(@colour5,0.15);
+	border: 0px;
+}
+
+#workspaces button.active {
+	background-color: alpha(@colour3,0.25);
+	color: alpha(@colour5,1);
+	font-weight: bold;
+	border: 0px
+}
+
+#workspaces button:hover {
+	background-color: alpha(@colour2,0.25);
+	color: alpha(@colour5,0.75);
+	font-weight: bold;
+	border: 0px;
+}
+
+
+#pulseaudio {
+	color: #268bd2;
+}
+#memory {
+	color: #2aa198;
+}
+#cpu {
+	color: #6c71c4;
+}
+#battery {
+	color: #859900;
+}
+#disk {
+	color: #b58900;
+}
+
+#clock,
+#pulseaudio,
+#memory,
+#cpu,
+#battery,
+#disk {
+	padding: 0 10px;
+	margin: 3px 3px;
+	font-weight: bold;
+}
+
+#custom-appmenu {
+	padding: 0 10px;
+	background: @colour1;
+	color: @colour6;
+	font-weight: bold;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+	margin-left: 75px;
+	border-radius: 10px;
+}
+
+#custom-appmenu:hover {
+	background-color: alpha(@colour4,0.15);
+}
